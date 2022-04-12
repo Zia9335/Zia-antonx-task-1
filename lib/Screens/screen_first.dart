@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:w1/Components/constants.dart';
 import 'package:w1/Screens/list_screen.dart';
-import 'package:w1/Screens/home_screen0.dart';
-class NewScreenHome extends StatefulWidget {
-  const NewScreenHome({Key? key}) : super(key: key);
+import 'package:w1/Screens/home_screen.dart';
+
+class ScreenFirst extends StatefulWidget {
+  const ScreenFirst({Key? key}) : super(key: key);
 
   @override
-  State<NewScreenHome> createState() => _NewScreenHomeState();
+  State<ScreenFirst> createState() => _ScreenFirstState();
 }
 
-class _NewScreenHomeState extends State<NewScreenHome> {
-  @override
+class _ScreenFirstState extends State<ScreenFirst> {
   int _selectedIndex = 0;
 
   static List<Widget> pages = <Widget>[
-    HomeScreen0(),
+    HomeScreen(),
     ListScreen(),
     Container(
       color: Colors.blue,
@@ -27,24 +27,26 @@ class _NewScreenHomeState extends State<NewScreenHome> {
     });
   }
 
+  @override
   Widget build(BuildContext context) {
-    return SafeArea(child: Scaffold(
-
+    return SafeArea(
+        child: Scaffold(
+          backgroundColor: kScaffoldColor,
       body: pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: darkGreen,
         currentIndex: _selectedIndex,
-        onTap: (value){_onItemTapped(value);},
-        items: const  <BottomNavigationBarItem> [
-           BottomNavigationBarItem(
+        onTap: (value) {
+          _onItemTapped(value);
+        },
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.list_alt_outlined),
-            label: 'Lists'
-          ),
-           BottomNavigationBarItem(
+              icon: Icon(Icons.list_alt_outlined), label: 'Lists'),
+          BottomNavigationBarItem(
             icon: Icon(Icons.settings),
             label: 'Setting',
           ),
