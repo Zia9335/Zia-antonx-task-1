@@ -15,6 +15,8 @@ class NewsAndExibitions extends StatelessWidget {
     const NewsAndExibitionsCards(),
     const NewsAndExibitionsCards(),
     const NewsAndExibitionsCards(),
+    const NewsAndExibitionsCards(),
+    const NewsAndExibitionsCards(),
   ];
   @override
   Widget build(BuildContext context) {

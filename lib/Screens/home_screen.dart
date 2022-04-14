@@ -4,6 +4,8 @@ import 'package:w1/Components/top_visted_list.dart';
 import 'package:w1/Components/constants.dart';
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key? key}) : super(key: key);
+
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
