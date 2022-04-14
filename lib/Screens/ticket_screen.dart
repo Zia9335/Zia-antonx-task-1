@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:w1/Components/constants.dart';
 import 'package:w1/Components/news_and_exibition.dart';
@@ -39,8 +40,9 @@ class _TicketScreenState extends State<TicketScreen> {
               decoration: kTicketStackContainerDecorationStyle,
               height: MediaQuery.of(context).size.height - 270,
               width: 360,
-    padding: const EdgeInsets.only(top: 40.0, left: 20, right: 20),
+    padding: const EdgeInsets.only(top: 10.0, left: 20, right: 20),
               child: ListView(
+                clipBehavior: Clip.antiAliasWithSaveLayer,
                    scrollDirection: Axis.vertical,
                     children: [
                       Row(
@@ -150,7 +152,7 @@ class _TicketScreenState extends State<TicketScreen> {
               ),
             ),
           Positioned(
-            top: 730,
+            top: 700,
             left: 20,
             right: 20,
             child: ElevatedButton(
