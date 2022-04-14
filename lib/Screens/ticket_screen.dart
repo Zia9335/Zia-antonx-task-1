@@ -34,16 +34,14 @@ class _TicketScreenState extends State<TicketScreen> {
             fit: BoxFit.fill,
           )),
           Positioned(
-            top: 270,
+            top: 250,
             child: Container(
               decoration: kTicketStackContainerDecorationStyle,
               height: MediaQuery.of(context).size.height - 270,
               width: 360,
-              child: Padding(
-                padding: const EdgeInsets.only(top: 40.0, left: 20, right: 20),
-                child: ListView(
-                    primary: true,
-                    scrollDirection: Axis.vertical,
+    padding: const EdgeInsets.only(top: 40.0, left: 20, right: 20),
+              child: ListView(
+                   scrollDirection: Axis.vertical,
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -67,7 +65,7 @@ class _TicketScreenState extends State<TicketScreen> {
                         ),
                       ),
                       const SizedBox(
-                        height: 20.0,
+                        height: 10.0,
                       ),
                       Row(
                         children: [
@@ -101,7 +99,7 @@ class _TicketScreenState extends State<TicketScreen> {
                         ],
                       ),
                       const SizedBox(
-                        height: 20.0,
+                        height: 10.0,
                       ),
                       Row(
                         children: [
@@ -151,7 +149,6 @@ class _TicketScreenState extends State<TicketScreen> {
                     ]),
               ),
             ),
-          ),
           Positioned(
             top: 730,
             left: 20,
