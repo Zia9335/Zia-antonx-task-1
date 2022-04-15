@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:w1/Components/constants.dart';
-import 'package:w1/Components/news_and_exibition.dart';
+import 'package:w1/CustomWidgets/custom_widgets.dart';
 
 class TicketScreen extends StatefulWidget {
-  TicketScreen({required this.images});
+  const TicketScreen({Key? key, required this.images}) : super(key: key);
 
   final String images;
 
@@ -13,13 +13,6 @@ class TicketScreen extends StatefulWidget {
 
 class _TicketScreenState extends State<TicketScreen> {
   String dropdownValue = '10 am - 8 pm';
-
-  List<String> options = [
-    'Item1',
-    'Item2',
-    'Item3',
-    'Item4',
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -143,8 +136,14 @@ class _TicketScreenState extends State<TicketScreen> {
                     ],
                   ),
                   const Divider(),
-                  NewsAndExibitions(
-                      primary: true, typeOfScrolling: Axis.vertical),
+                  SizedBox(
+                    height: 550,
+                    child: CustomListView(
+                      list: newExlistList,
+                      primary: false,
+                      typeOfScrolling: Axis.vertical,
+                    ),
+                  ),
                 ]),
               ),
             ),

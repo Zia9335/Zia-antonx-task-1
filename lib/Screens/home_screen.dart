@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:w1/Components/news_and_exibition.dart';
-import 'package:w1/Components/top_visted_list.dart';
 import 'package:w1/Components/constants.dart';
+import 'package:w1/CustomWidgets/custom_widgets.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -96,11 +95,49 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
           ),
-          TopVisitedList(),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Text(
+                    'Top Visited',
+                    style: TextStyle(
+                        color: darkGreen, fontWeight: FontWeight.bold),
+                  ),
+                  Text('View all',
+                      style: TextStyle(
+                        color: darkGreen,
+                      )),
+                ],
+              ),
+              const SizedBox(height: 10),
+              SizedBox(
+                  height: 250,
+                  child: CustomListView(
+                    list: topVisitList,
+                    typeOfScrolling: Axis.horizontal,
+                  )),
+            ],
+          ),
           const SizedBox(height: 10),
-          NewsAndExibitions(
-            primary: false,
-            typeOfScrolling: Axis.vertical,
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text(
+                'News and Exibitions',
+                style: TextStyle(color: darkGreen, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                height: 550,
+                child: CustomListView(
+                  list: newExlistList,
+                  primary: false,
+                  typeOfScrolling: Axis.vertical,
+                ),
+              ),
+            ],
           ),
         ],
       ),

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:w1/Screens/log _in_screen.dart';
 
-
-
 void main() {
   runApp(const MyApp());
 }
@@ -21,5 +19,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-

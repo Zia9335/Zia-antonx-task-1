@@ -3,22 +3,9 @@ import 'package:w1/Components/constants.dart';
 import 'package:w1/CustomWidgets/custom_widgets.dart';
 
 import '../CustomWidgets/custom_widgets.dart';
+
 class ListScreen extends StatelessWidget {
-  ListScreen({Key? key}) : super(key: key);
-   final List list= [
-     TopVisitedCard(pictureHeight: pictureHeight, pictureWidth: pictureWidth,),
-     TopVisitedCard(pictureHeight: pictureHeight, pictureWidth: pictureWidth,),
-     TopVisitedCard(pictureHeight: pictureHeight, pictureWidth: pictureWidth,),
-     TopVisitedCard(pictureHeight: pictureHeight, pictureWidth: pictureWidth,),
-     TopVisitedCard(pictureHeight: pictureHeight, pictureWidth: pictureWidth,),
-     TopVisitedCard(pictureHeight: pictureHeight, pictureWidth: pictureWidth,),
-     TopVisitedCard(pictureHeight: pictureHeight, pictureWidth: pictureWidth,),
-
-
-  ];
-
-
-
+  const ListScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,47 +15,57 @@ class ListScreen extends StatelessWidget {
         body: Padding(
           padding: const EdgeInsets.fromLTRB(20, 50, 20, 0),
           child: Column(
-
             children: [
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children:const  [
-                Text("Museums",
-                style:  h1TextStyle,),
+                children: const [
+                  Text(
+                    "Museums",
+                    style: h1TextStyle,
+                  ),
+                  Icon(Icons.map_outlined),
+                ],
+              ),
+              const TabBar(
+                indicatorColor: darkGreen,
+                labelColor: darkGreen,
+                tabs: [
+                  Tab(
+                    text: 'Top visited',
+                  ),
+                  Tab(
+                    text: 'Art',
+                  ),
+                  Tab(
+                    text: 'History',
+                  ),
+                  Tab(
+                    text: 'Military',
+                  ),
+                  Tab(
+                    text: 'Science',
+                  ),
+                ],
+              ),
+              Expanded(
+                child: TabBarView(children: [
+                  CustomListView(list: listScreenListOfCards),
+                  CustomListView(
+                    list: listScreenListOfCards,
+                  ),
+                  CustomListView(
+                    list: listScreenListOfCards,
+                  ),
+                  CustomListView(
+                    list: listScreenListOfCards,
+                  ),
+                  CustomListView(
+                    list: listScreenListOfCards,
+                  ),
 
-                Icon(Icons.map_outlined),
-              ],),
-
-
-            const  TabBar(
-                   indicatorColor: darkGreen,
-                   labelColor: darkGreen ,
-                   tabs: [
-                     Tab(text: 'Top visited',),
-                     Tab(text: 'Art',),
-                     Tab(text: 'History',),
-                     Tab(text: 'Military',),
-                     Tab(text: 'Science',),
-
-                   ],
-
-                 ),
-
-
-
-                 Expanded(
-                   child: TabBarView(children:[
-                    CustomListView(list: list,typeOfScrolling: Axis.vertical,),
-                     CustomListView(list: list,typeOfScrolling: Axis.vertical,),
-                     CustomListView(list: list,typeOfScrolling: Axis.vertical,),
-                     CustomListView(list: list,typeOfScrolling: Axis.vertical,),
-                     CustomListView(list: list,typeOfScrolling: Axis.vertical,),
-
-
-                     //
+                  //
                 ]),
-                 ),
+              ),
             ],
           ),
         ),
@@ -76,4 +73,3 @@ class ListScreen extends StatelessWidget {
     );
   }
 }
-

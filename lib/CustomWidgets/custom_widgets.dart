@@ -31,22 +31,19 @@ class CustomTextField extends StatelessWidget {
 
 class CustomListView extends StatelessWidget {
   const CustomListView(
-      {Key? key,
-      required this.list,
-      required this.typeOfScrolling,
-      this.primary})
+      {Key? key, required this.list, this.typeOfScrolling, this.primary})
       : super(key: key);
 
   final List list;
   final dynamic typeOfScrolling;
-  final primary;
+  final bool? primary;
 
 //Axis.vertical
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-      primary: primary,
-      scrollDirection: typeOfScrolling,
+      primary: primary ?? true,
+      scrollDirection: typeOfScrolling ?? Axis.vertical,
       itemCount: list.length,
       itemBuilder: (context, index) {
         return list[index];
