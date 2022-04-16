@@ -21,14 +21,14 @@ class ListScreen extends StatelessWidget {
                 children: const [
                   Text(
                     "Museums",
-                    style: h1TextStyle,
+                    style: kH1TextStyle,
                   ),
                   Icon(Icons.map_outlined),
                 ],
               ),
               const TabBar(
-                indicatorColor: darkGreen,
-                labelColor: darkGreen,
+                indicatorColor: kDarkGreen,
+                labelColor: kDarkGreen,
                 tabs: [
                   Tab(
                     text: 'Top visited',

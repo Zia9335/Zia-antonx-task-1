@@ -104,11 +104,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   Text(
                     'Top Visited',
                     style: TextStyle(
-                        color: darkGreen, fontWeight: FontWeight.bold),
+                        color: kDarkGreen, fontWeight: FontWeight.bold),
                   ),
                   Text('View all',
                       style: TextStyle(
-                        color: darkGreen,
+                        color: kDarkGreen,
                       )),
                 ],
               ),
@@ -127,7 +127,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               const Text(
                 'News and Exibitions',
-                style: TextStyle(color: darkGreen, fontWeight: FontWeight.bold),
+                style: TextStyle(color: kDarkGreen, fontWeight: FontWeight.bold),
               ),
               SizedBox(
                 height: 550,

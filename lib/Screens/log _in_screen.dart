@@ -23,7 +23,7 @@ class LogInScreen extends StatelessWidget {
                 onPressed: null,
                 icon: Icon(
                   Icons.arrow_back_ios,
-                  color: darkGreen,
+                  color: kDarkGreen,
                 ),
               ),
               const Spacer(),
@@ -32,7 +32,7 @@ class LogInScreen extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: "Times New Roman",
                   fontSize: 20.0,
-                  color: darkGreen,
+                  color: kDarkGreen,
                   fontWeight: FontWeight.w900,
                 ),
                 textAlign: TextAlign.center,
@@ -48,6 +48,7 @@ class LogInScreen extends StatelessWidget {
                 height: 10.0,
               ),
               const CustomTextField(
+                textInputType: TextInputType.emailAddress,
                 hintText: "Enter your email",
               ),
               const Text(
@@ -58,6 +59,7 @@ class LogInScreen extends StatelessWidget {
                 height: 10.0,
               ),
               const CustomTextField(
+                obscureText: true,
                 hintText: "Enter password",
               ),
               const TextButton(
@@ -85,10 +87,10 @@ class LogInScreen extends StatelessWidget {
                 },
                 child:const Center(
                   child: Padding(
-                    padding: EdgeInsets.only(left: 20,right: 20,top: 10,bottom: 10),
+                    padding: EdgeInsets.only(left: 20,right: 20,top: 15,bottom: 15),
                     child:  Text(
                       'Log In',
-                      style: TextStyle(fontSize: 20.0),
+                      style: kElevatorButtonTextStyle,
                     ),
                   ),
                 ),

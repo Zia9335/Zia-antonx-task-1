@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:w1/CustomWidgets/custom_widgets.dart';
 
-const Color darkGreen = Color.fromARGB(255, 4, 33, 28);
-const Color textFieldColor = Color.fromARGB(150, 70, 80, 80);
-const TextStyle h1TextStyle = TextStyle(
+const Color kDarkGreen = Color.fromARGB(255, 4, 33, 28);
+const Color kTextFieldColor = Color.fromARGB(150, 70, 80, 80);
+const TextStyle kH1TextStyle = TextStyle(
   fontFamily: "Times New Roman",
   fontSize: 20.0,
-  color: darkGreen,
+  color: kDarkGreen,
   fontWeight: FontWeight.w900,
 );
 
-const double pictureHeight = 150.0;
-const double pictureWidth = 300.0;
+const double kPictureHeight = 150.0;
+const double kPictureWidth = 300.0;
 const kLogInLabelStyle = TextStyle(
   fontFamily: "Times New Roman",
   fontSize: 15.0,
-  color: textFieldColor,
+  color: kTextFieldColor,
 );
 
 const Color kScaffoldColor = Color.fromARGB(255, 245, 245, 245);
@@ -56,31 +56,37 @@ final List topVisitList = [
 
 final List listScreenListOfCards = [
   TopVisitedCard(
-    pictureHeight: pictureHeight,
-    pictureWidth: pictureWidth,
+    pictureHeight: kPictureHeight,
+    pictureWidth: kPictureWidth,
   ),
   TopVisitedCard(
-    pictureHeight: pictureHeight,
-    pictureWidth: pictureWidth,
+    pictureHeight: kPictureHeight,
+    pictureWidth: kPictureWidth,
   ),
   TopVisitedCard(
-    pictureHeight: pictureHeight,
-    pictureWidth: pictureWidth,
+    pictureHeight: kPictureHeight,
+    pictureWidth: kPictureWidth,
   ),
   TopVisitedCard(
-    pictureHeight: pictureHeight,
-    pictureWidth: pictureWidth,
+    pictureHeight: kPictureHeight,
+    pictureWidth: kPictureWidth,
   ),
   TopVisitedCard(
-    pictureHeight: pictureHeight,
-    pictureWidth: pictureWidth,
+    pictureHeight: kPictureHeight,
+    pictureWidth: kPictureWidth,
   ),
   TopVisitedCard(
-    pictureHeight: pictureHeight,
-    pictureWidth: pictureWidth,
+    pictureHeight: kPictureHeight,
+    pictureWidth: kPictureWidth,
   ),
   TopVisitedCard(
-    pictureHeight: pictureHeight,
-    pictureWidth: pictureWidth,
+    pictureHeight: kPictureHeight,
+    pictureWidth: kPictureWidth,
   ),
 ];
+
+const TextStyle kElevatorButtonTextStyle=TextStyle(
+  fontWeight: FontWeight.bold,
+  fontSize: 20,
+  fontFamily: 'Time New Roman',
+);

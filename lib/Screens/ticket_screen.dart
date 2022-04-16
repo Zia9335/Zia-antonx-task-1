@@ -110,7 +110,7 @@ class _TicketScreenState extends State<TicketScreen> {
                         width: 50,
                         child: const Icon(
                           Icons.calendar_today,
-                          color: darkGreen,
+                          color: kDarkGreen,
                         ),
                       ),
                       const SizedBox(
@@ -159,11 +159,7 @@ class _TicketScreenState extends State<TicketScreen> {
               child: const Padding(
                 padding: EdgeInsets.only(top: 15.0, bottom: 15),
                 child: Text('By Ticket',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                      fontFamily: 'Time New Roman',
-                    )),
+                    style: kElevatorButtonTextStyle,),
               ),
             ),
           )

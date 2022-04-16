@@ -34,7 +34,7 @@ class _ScreenFirstState extends State<ScreenFirst> {
           backgroundColor: kScaffoldColor,
       body: pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: darkGreen,
+        selectedItemColor: kDarkGreen,
         currentIndex: _selectedIndex,
         onTap: (value) {
           _onItemTapped(value);

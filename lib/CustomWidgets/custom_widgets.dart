@@ -1,25 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:w1/Components/constants.dart';
 import 'package:w1/Screens/ticket_screen.dart';
 
 class CustomTextField extends StatelessWidget {
-  const CustomTextField({Key? key, required this.hintText}) : super(key: key);
+  const CustomTextField({Key? key, this.textInputType, this.obscureText, required this.hintText, this.inputBorder}) : super(key: key);
   final String hintText;
-
+final bool? obscureText;
+final TextInputType? textInputType;
+final InputBorder? inputBorder;
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: Padding(
         padding: const EdgeInsets.only(right: 20.0),
         child: TextField(
+
+          keyboardType: textInputType?? TextInputType.text,
+          obscureText: obscureText ?? false,
           decoration: InputDecoration(
+            focusedBorder: const OutlineInputBorder(
+              borderSide:
+              BorderSide(color: kDarkGreen, width: 2.0),
+            ),
             fillColor: Colors.white,
+            contentPadding:
+            const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
             hintText: hintText,
             hintStyle: const TextStyle(
               fontFamily: "Segoe UI Semibold",
               fontSize: 15.0,
               color: Color.fromARGB(100, 70, 80, 80),
             ),
-            border: OutlineInputBorder(
+            border: inputBorder ??  OutlineInputBorder(
               borderRadius: BorderRadius.circular(10.0),
             ),
           ),
